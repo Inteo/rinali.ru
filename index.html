@@ -17,6 +17,13 @@
   <script src="/f/js/jquery.onepage-scroll.min.js"></script>
   <script src="/f/js/common.js"></script>
   <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+  <style>
+    svg {
+      width: 458px; height: 80px;
+      font: bold 80px/80px 'ProximaNova', sans-serif;
+    }
+    text { fill: url(#germany); }
+  </style>
 </head>
 <body>
   <div class="b-wrap">
@@ -42,27 +49,29 @@
   
       <div class="b-scroll">
         <section class="b-main">
+        <div class="b-main__title-wrap">
           <h1 class="b-main__title">Мебель <span>и</span> техника из 
-          <svg>
-            <defs>
-              <pattern id="german" patternUnits="userSpaceOnUse" width="458px" height="80px" >
-                <image xlink:href="/f/i/german.png" width="458px" height="80px" />
-              </pattern>
-            </defs>
-            <text y="80px">Германии</text>
-          </svg>
+            <svg>
+              <defs>
+                <pattern id="germany" patternUnits="userSpaceOnUse" width="458" height="80" >
+                  <image xlink:href="/f/i/german.png" width="458" height="80" />
+                </pattern>
+              </defs>
+              <text y="80px">ГЕРМАНИИ</text>
+            </svg>
           </h1>
+          </div>
         </section>
-        <section class="b-kitchens">
+        <section class="b-kitchens" data-section-name="Кухни">
           <h1 class="b-main__title">кухни</h1>
         </section>
-        <section class="b-furniture">
+        <section class="b-furniture" data-section-name="Мебель">
           <h1 class="b-main__title">мебель</h1>
         </section>
-        <section class="b-tech">
+        <section class="b-tech" data-section-name="Техника">
           <h1 class="b-main__title">техника</h1>
         </section>
-        <section class="b-textile">
+        <section class="b-textile" data-section-name="Текстиль">
           <h1 class="b-main__title">текстиль</h1>
         </section>
       </div>

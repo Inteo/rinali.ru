@@ -1502,21 +1502,23 @@ a:hover {
 .b-main {
   text-align: center;
 }
+.b-main__title-wrap {
+  display: inline-block;
+  vertical-align: top;
+  width: 800px;
+  margin-top: 70px;
+}
 .b-main__title {
   font: bold 80px 'ProximaNova', sans-serif;
   text-transform: uppercase;
+  letter-spacing: normal;
 }
 .b-main__title span {
   font-size: 40px;
 }
-svg {
-  width: 458px; 
-  height: 80px;
-  font: bold 80px 'ProximaNova', sans-serif;
-}
-text { 
-  fill: url(#german);
-}
+
+
+
 .b-kitchens {
 
 }
