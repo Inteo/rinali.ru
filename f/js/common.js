@@ -159,6 +159,4 @@
 
  }(this, document, jQuery));
 
- $(document).ready(function(){
-  $('.b-scroll').onepage_scroll();
- })
+
