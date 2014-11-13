@@ -1519,6 +1519,7 @@ a:hover {
 }
 .b-container_scrolled .b-content {
   overflow: visible;
+  padding-bottom: 150px;
 }
 .b-footer__search {
   float: right;
@@ -2454,6 +2455,7 @@ a:hover {
   float: left;
   margin-right: 68px;
   padding-top: 10px;
+  z-index: 10;
 }
 @media (max-width: 1279px) {
   .b-about-brand {
@@ -2464,7 +2466,7 @@ a:hover {
   margin-bottom: 25px;
 }
 .b-about-brand__ico {
-  left: -80px;
+  left: -70px;
   position: absolute;
   top: -105px;
   z-index: -1;
@@ -2478,13 +2480,14 @@ a:hover {
 }
 .b-goods__detail {
   overflow: hidden;
+  padding-bottom: 50px;
 }
 .b-goods__detail-text {
   line-height: 35px;
   margin-bottom: 35px;
 }
 .b-goods__detail-name {
-  width: 130px;
+  width: 175px;
   display: inline-block;
   vertical-align: top;
   line-height: 35px;
@@ -2819,4 +2822,102 @@ a:hover {
 }
 .b-subsection-filter__item_active:hover {
   outline: none;
+}
+.b-where {
+  height: 230px;
+  position: absolute;
+  right: 60px;
+  top: 110px;
+  width: 280px;
+  z-index: 10;
+  text-align: center;
+  padding-top: 50px;
+
+}
+.b-where:before {
+  background: #f7df08;
+  width: 100%;
+  height: 100%;
+  -moz-transform: skewY(-15deg);
+  -ms-transform: skewY(-15deg); 
+  -webkit-transform: skewY(-15deg); 
+  -o-transform: skewY(-15deg); 
+  transform: skewY(-15deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  z-index: -1;
+}
+.b-where:after {
+  background: url(/f/i/map.jpg);
+  background-position: -30px -30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  content: '';
+  -moz-transform: skewY(-15deg);
+  -ms-transform: skewY(-15deg); 
+  -webkit-transform: skewY(-15deg); 
+  -o-transform: skewY(-15deg); 
+  transform: skewY(-15deg);
+  z-index: -1;
+}
+.b-where__price {
+  font: bold 40px/70px 'ProximaNova', sans-serif;
+  letter-spacing: .05em;
+}
+.b-where__price span {
+  font-size: 16px;
+  margin-right: 5px;
+}
+.b-where__price .rub {
+  font-size: 40px;
+  margin-left: 5px;
+}
+.b-where__btn .black-btn {
+  padding: 0 40px;
+}
+.b-where__btn .icon-contacts {
+  margin-right: 10px;
+}
+.b-file {
+  position: relative;
+  padding-left: 60px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 30px;
+}
+.b-file__title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.b-file__title span {
+  font-weight: normal;
+}
+.b-file__link {
+  border: none;
+  font-size: 14px;
+  font-style: italic;
+}
+.b-file__link span {
+  border-bottom: 1px solid;
+}
+.b-file__link:before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(/f/i/icons.png) -344px 0 no-repeat;
+}
+.b-file_pdf .b-file__link:before {
+  background-position: -344px 0;
+}
+.b-file_pdf .b-file__link:hover:before {
+  background-position: -384px 0;
 }
