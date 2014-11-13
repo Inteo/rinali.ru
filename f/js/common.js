@@ -159,4 +159,93 @@
 
  }(this, document, jQuery));
 
+totalWidth = function(container){
+  var total_width = 0;
+  $(container).find(".b-popup__scroll-item").each(function(){
+    total_width = total_width + $(this).width() + parseInt($(this).css('margin-left'));
+  });
+  $(container).find("ul").width(total_width);
+}
 
+$(document).ready(function(){
+  $(".b-facade-popup-link").click(function() {
+    $.fancybox.open({
+      padding: 0,
+      maxWidth: 780,
+      minHeight: 580,
+      href: "#facade-popup",
+      scrolling: 'no',
+      helpers: {
+        overlay: {
+          locked: true
+        }
+      }
+    });
+    totalWidth("#facade-scroll");
+    var popupScroll;
+    popupScroll = new IScroll("#facade-scroll", {
+      mouseWheel: true,
+      scrollbars: true,
+      scrollX: true,
+      resizeScrollbars: false,
+      interactiveScrollbars: true
+    });
+    return false;
+  });
+
+  $(".b-haft-popup-link").click(function() {
+    $.fancybox.open({
+      padding: 0,
+      maxWidth: 780,
+      minHeight: 640,
+      href: "#haft-popup",
+      scrolling: 'no',
+      helpers: {
+        overlay: {
+          locked: true
+        }
+      }
+    });
+    totalWidth("#haft-scroll");
+    var popupScroll;
+    popupScroll = new IScroll("#haft-scroll", {
+      mouseWheel: true,
+      scrollbars: true,
+      scrollX: true,
+      resizeScrollbars: false,
+      interactiveScrollbars: true
+    });
+    return false;
+  });
+
+  $(".b-tabletop-popup-link").click(function() {
+    $.fancybox.open({
+      padding: 0,
+      maxWidth: 780,
+      minHeight: 650,
+      href: "#tabletop-popup",
+      scrolling: 'no',
+      helpers: {
+        overlay: {
+          locked: true
+        }
+      }
+    });
+    totalWidth("#tabletop-scroll");
+    var popupScroll;
+    popupScroll = new IScroll("#tabletop-scroll", {
+      mouseWheel: true,
+      scrollbars: true,
+      scrollX: true,
+      resizeScrollbars: false,
+      interactiveScrollbars: true
+    });
+    return false;
+  });
+});
+$(function(){
+  $(".b-popup__scroll-img").click(function(){
+    $(this).parent().parent().parent().parent().find(".b-popup__main-img").attr("src", $(this).attr("src"));
+    $(this).parent().parent().parent().parent().find(".b-popup__scroll-name").text($(this).data("name"));
+  })
+})
