@@ -2011,7 +2011,8 @@ a:hover {
     margin-right: 0;
   }
 }
-.b-catalog {
+.b-catalog,
+.b-section {
   padding-top: 35px;
 }
 .b-breadcrumbs {
@@ -2035,6 +2036,9 @@ a:hover {
 .b-title {
   text-align: center;
   margin-bottom: 85px;
+}
+.b-title_section {
+  margin-bottom: 135px;
 }
 .b-title__wrap {
   display: inline-block;
@@ -2646,4 +2650,125 @@ a:hover {
   width: 124px;
   height: 50px;
   cursor: pointer;
+}
+.b-section__item {
+  width: 33.333333%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 10px;
+  margin-bottom: 100px;
+  position: relative;
+}
+.b-section__title:before {
+  content: '';
+  position: absolute;
+  top: -70px;
+  margin: auto;
+  background: url(/f/i/furniture/icons.png) no-repeat;
+  background-position: 0 0;
+  width: 213px;
+  height: 237px;
+  z-index: -1;
+  right: 10%;
+}
+.b-section__item_soft .b-section__title:hover:before {
+  background-position: 0 -237px ;
+}
+.b-section__item_bedroom .b-section__title:before {
+  background-position: -213px 0;
+  width: 226px;
+}
+.b-section__item_bedroom .b-section__title:hover:before {
+  background-position: -213px -237px;
+}
+.b-section__item_livingroom .b-section__title:before {
+  width: 121px;
+  background-position: -439px 0;
+  right: 25%;
+}
+.b-section__item_livingroom .b-section__title:hover:before {
+  background-position: -439px -237px;
+} 
+.b-section__item_dining-area .b-section__title:before {
+  width: 300px;
+  background-position: -560px 0;
+  right: auto;
+  left: 10%;
+}
+.b-section__item_dining-area .b-section__title:hover:before {
+  background-position: -560px -237px;
+}
+.b-section__item_wardrobe .b-section__title:before {
+  width: 192px;
+  background-position: -860px 0;
+  right: auto;
+  left: 30%;
+}
+.b-section__item_wardrobe .b-section__title:hover:before {
+  background-position: -860px -237px;
+}
+.b-section__item_library .b-section__title:before {
+  background-position: -1052px 0;
+  width: 218px;
+  right: auto;
+  left: 20%;
+}
+.b-section__item_library .b-section__title:hover:before {
+  background-position: -1052px -237px;
+}
+.b-section__item_bathroom .b-section__title:before {
+  width: 188px;
+  background-position: -1270px 0;
+}
+.b-section__item_bathroom .b-section__title:hover:before {
+  background-position: -1270px -237px;
+}
+.b-section__item_desk .b-section__title:before {
+  width: 229px;
+  background-position: -1458px 0;
+  right: 15%;
+}
+.b-section__item_desk .b-section__title:hover:before {
+  background-position: -1458px -237px;
+}
+.b-section__item_hallway .b-section__title:before {
+  background-position: -1687px 0;
+  width: 157px;
+  right: 40%;
+}
+.b-section__item_hallway .b-section__title:hover:before {
+  background-position: -1687px -237px;
+}
+/* @media (max-width: 1152px) {
+  .b-section__item {
+    width: 50%;
+  }
+} */
+.b-section__title {
+  font: bold 30px/50px 'ProximaNova', sans-serif;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  border-bottom: 5px solid;
+}
+.b-section__title:hover {
+  color: #000;
+  border-bottom-color: #f7df08;
+}
+.b-section__links {
+  max-width: 450px;
+  margin: 15px auto 0;
+}
+.b-section__links a {
+  border: none;
+  margin-right: 10px;
+  white-space: nowrap;
+  word-wrap: normal;
+  line-height: 35px;
+  padding: 1px 5px;
+  font-size: 16px;
+}
+.b-section__links a:hover {
+  color: #000;
+  background: #f7df08;
 }
