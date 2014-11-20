@@ -1271,6 +1271,7 @@ input[type='submit'].btn-block, input[type='reset'].btn-block, input[type='butto
   src: url('/f/fonts/ProximaNova.otf') format('opentype');
   font-weight: bold;
 }
+
 html, body{
   padding:0;
   margin:0;
@@ -2822,7 +2823,8 @@ a:hover {
   text-align: center;
   margin-bottom: 20px;
 }
-.b-projects .b-subsection-filter {
+.b-projects .b-subsection-filter,
+.b-samples .b-subsection-filter {
   margin-bottom: 35px;
 }
 .b-subsection-filter__wrap {
@@ -4187,9 +4189,6 @@ a:hover {
 .b-promo .b-catalog__text {
   font: 14px/30px 'ProximaNova', sans-serif;
 }
-.b-catalog__item_promo .b-catalog__img {
-  position: relative;
-}
 .b-catalog__item_promo i {
   position: absolute;
   width: 50px;
@@ -4255,4 +4254,25 @@ a:hover {
   .b-promo-item .b-about-brand {
     display: block;
   }
+}
+.b-samples .b-title {
+  margin-bottom: 70px;
+}
+.b-catalog__old-price {
+  font: normal 20px/35px 'ProximaNova', sans-serif !important;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  position: relative;
+  margin: 0!important;
+}
+.b-catalog__old-price:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #000;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
 }
