@@ -2424,14 +2424,12 @@ a:hover {
 }
 .b-advice__name {
   font-style: italic;
-  line-height: 20px;
   margin-bottom: 5px;
   font-weight: bold;
 }
 .b-advice__func {
   font-style: italic;
   font-size: 13px;
-  line-height: 20px;
   margin-bottom: 22px;
   font-weight: bold;
 }
@@ -3605,7 +3603,6 @@ a:hover {
 .b-employ__name {
   font-weight: bold;
   font-style: italic;
-  line-height: 20px;
   margin-bottom: 5px;
 }
 .b-employ__func {
@@ -3636,7 +3633,6 @@ a:hover {
 .b-employ__vacancy {
   font-weight: bold;
   font-style: italic;
-  line-height: 20px;
   margin-bottom: 23px;
 }
 .b-demands__title {
@@ -3874,4 +3870,191 @@ a:hover {
 }
 .b-collab__img {
   margin-bottom: 20px;
+}
+.b-collab__btn .icon-contacts {
+  margin-right: 10px;
+}
+.b-collab__btn {
+  padding: 0 15px;
+}
+.b-contact-page {
+  padding-top: 35px;
+}
+.b-contact-page .b-title {
+  margin-bottom: 78px;
+}
+.b-view {
+  text-align: center;
+  margin-bottom: 35px;
+}
+.b-view__wrap {
+  display: inline-block;
+  vertical-align: top;
+}
+.b-view__caption {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 35px;
+}
+.b-view__tab {
+  font-size: 14px;
+  line-height: 35px;
+  margin-left: 20px;
+  position: relative; 
+  cursor: pointer;
+}
+.b-view__tab:not(.b-view__tab_active):hover span {
+  border-bottom: 3px solid #f7df07;
+}
+.b-view__tab:not(.b-view__tab_active):hover:before {
+  border-color: #f7df07;
+}
+.b-view__tab:before {
+  content: '';
+  border: 2px solid #000;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-bottom: 3px;
+  width: 10px;
+  height: 10px;
+}
+.b-view__tab_1:before {
+  border-radius: 50%;
+}
+.b-view__tab_2:before {
+
+}
+.b-view__tab_3:before {
+  width: 20px;
+}
+.b-view__tab_active {
+  cursor: default;
+}
+.b-view__tab_active span {
+  font-weight: bold;
+  border-bottom: 3px solid;
+}
+.b-contact-page__map {
+  margin-bottom: 40px;
+  height: 500px;
+}
+.b-contact-page__tab {
+  display: none;
+}
+.b-contact-page__tab_active {
+  display: block;
+}
+.b-contact-page__detail {
+  width: 33.333333%;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 426px;
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 50px;
+}
+.b-contact-page__detail_full {
+  max-width: 100%;
+}
+.b-contact-page__detail-wrap {
+  margin-left: -50px;
+}
+.b-contact-page__detail-list {
+  list-style: none;
+  padding-left: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+.b-contact-page__num {
+  font: bold 14px/20px 'ProximaNova', sans-serif;
+  background: #f7df07;
+  border-radius: 50%;
+  padding: 0 7px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 3px 5px 0 0;
+}
+.b-contact-page__line {
+  font-size: 14px;
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+.b-contact-page__line span {
+  font-weight: bold;
+}
+.b-contact-page__line_schedule {
+  margin-bottom: 0;
+}
+.b-contact-page__img {
+  margin-bottom: 30px;
+}
+.b-contact-page__img img {
+  width: 100%;
+  background: #f2f7f9;
+  display: block;
+  min-height: 200px;
+}
+.b-contact-popup {
+  background: #fff;
+  width: 800px;
+  height: 250px;
+  padding: 0;
+  overflow: hidden;
+}
+.b-contact-popup__img {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  background: #f2f7f9;
+  height: 100%;
+  overflow: hidden;
+}
+.b-contact-popup__img img {
+  height: 100%;
+}
+.b-contact-popup__detail {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  padding: 20px 0 0 20px;
+}
+.map-marker-label{
+  position: absolute;
+  color: #000;
+  font: bold 14px/20px 'ProximaNova', sans-serif;
+  background: #f7df0a;
+  padding: 0 7px;
+  height: 20px;
+  display: block;
+  border-radius: 50%;
+  text-align: center;
+}
+.close-box {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 8040;
+  background: #000;
+  border: none;
+  margin: 0!important;
+}
+.close-box:before {
+  content: '';
+  width: 20px;
+  height: 19px;
+  position: absolute ;
+  background: url(/f/i/icons.png);
+  background-position: 0 -42px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.close-box:hover:before {
+  background-position: 0 -61px;
 }
