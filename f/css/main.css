@@ -4137,3 +4137,46 @@ a:hover {
   font-weight: bold;
   line-height: 25px;
 }
+.b-tip {
+  padding-top: 30px;
+}
+.b-tip__title {
+  font: bold 60px/60px 'ProximaNova', sans-serif;
+  letter-spacing: .05em;
+  margin: 0;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.b-tip__item img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.b-tip__description {
+  font-size: 14px;
+  line-height: 25px;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+.b-tip__slider .fotorama__nav-wrap {
+  bottom: auto !important;
+}
+.b-tip__slider {
+  margin-bottom: 35px;
+}
+.b-tip__text {
+  line-height: 35px;
+  margin-bottom: 30px;
+}
+.b-tip__text-wrap {
+  margin-bottom: 45px;
+}
+.b-tip__subtitle {
+  font: bold 40px/70px 'ProximaNova', sans-serif;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+.b-tip__img {
+  width: 100%;
+  margin-bottom: 15px;
+}

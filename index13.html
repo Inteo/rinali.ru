@@ -1,0 +1,132 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Rinali</title>
+  <meta name="viewport" content="width=1010">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="/f/css/fotorama.css">
+  <link rel="stylesheet" href="/f/css/main.css">
+  <!--[if lte IE 9]><link rel="stylesheet" href="f/css/ie.css"><![endif]-->
+  <link rel="stylesheet" href="/f/fancybox/jquery.fancybox.css?v=2.1.5" media="screen">
+  <link rel="shortcut icon" href="favicon.ico">
+  <script src="/f/js/jquery-1.11.1.min.js"></script>
+  <script src="/f/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+  <script src="/f/js/fotorama.js"></script>
+  <script src="/f/js/iscroll.js"></script>
+  <script src="/f/js/common.js"></script>
+  <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+  <script>
+    $(function(){
+      $(".b-tip__slider").on('fotorama:showend', function (e, fotorama) {
+        slider_resize();
+      });
+     })
+    $(document).ready(function(){
+      slider_resize();
+    });
+    $(window).resize(function(){
+      slider_resize();
+    });
+    function slider_resize(){
+      var $fotoramaDiv = $('.b-tip__slider').fotorama();
+      var fotorama = $fotoramaDiv.data('fotorama');
+      fotorama.resize({
+        height: $(".b-tip__item").height()
+      });
+      
+      var h = $(".b-tip__slider .b-tip__item img").height();
+      $(".b-tip__slider .fotorama__nav-wrap").css("top", h - 40)
+     }
+  </script>
+</head>
+<body>
+  <div class="b-wrap">
+    <div class="b-container b-container_scrolled">
+      <header class="b-header">
+        <a href="/" class="b-logo">
+          <img src="/f/i/logo.jpg" alt="">
+        </a>
+        <div class="b-contacts">
+          <a href="#" class="iconize-link"><span class="icon-contacts"></span><span class="b-contacts__link">Контакты</span></a>
+        </div>
+        <div class="b-main-menu-wrap">
+          <ul class="b-main-menu">
+            <li class="b-main-menu__item"><a href="#">Кухни</a></li>
+            <li class="b-main-menu__item"><a href="#">Мебель</a></li>
+            <li class="b-main-menu__item"><a href="#">Техника</a></li>
+            <li class="b-main-menu__item"><a href="#">текстиль</a></li>
+          </ul>
+        </div>
+      </header>
+      <div class="b-content clearfix">
+        <div class="b-tip">
+          <ul class="b-breadcrumbs">
+            <li class="b-breadcrumbs__item b-breadcrumbs__item_home"><a href="/" class="icon-home"></a></li><li class="b-breadcrumbs__item"><span>&rarr; </span><a href="#">Советы специалистов</a></li><li class="b-breadcrumbs__item"><span>&rarr; </span><span>Лидер кухонного рынка</span></li>
+          </ul>
+          <h1 class="b-tip__title">ЛИДЕР КУХОННОГО РЫНКА</h1>
+          <div class="b-holder">
+            <div class="b-tip__slider fotorama" data-width="100%" data-arrows="false" data-transition="crossfade" data-autoplay="true" data-loop="true">
+              <div class="b-tip__item">
+               <img src="/f/i/tips/slide1.jpg" alt="">
+               <p class="b-tip__description">Штаб-квартира компании находится в городе Лене, что в 80 километрах западнее города Г роде Лене, что в 80 километрах роде Лене, что в 80 килоода Г роде Лене, что в 80 километрах роде Лене, чтода Г роде Лене, что в 80 километрах роде Лене, чтода Г роде Лене, что в 80 километрах роде Лене, чтода Г роде Лене, что в 80 километрах роде Лене, чтода Г роде Лене, что в 80 километрах роде Лене, чтметрах роде Лене, что в 80 километрах роде Лене, что в 80 километрах роде Лене, что в 80 километрах анновер</p>
+              </div>
+              <div class="b-tip__item">
+                <img src="/f/i/kitchen/slider/2.jpg" alt="">
+                <p class="b-tip__description">Штаб-квартира компании находится в городе Лене, что  б-квартира  что  б-квартира компани что  б-квартира компаникомпании нав 80 километрах западнее города Ганновер</p>
+              </div>
+              <div class="b-tip__item">
+                <img src="/f/i/kitchen/slider/3.jpg" alt="">
+                <p class="b-tip__description">ра компании находится в Штаб-кварти Штаб-квартигороде Лене, что в 80 что  б-квартира компани километрах западнее города Ганновер</p>
+              </div>
+              <div class="b-tip__item">
+                <img src="/f/i/kitchen/slider/4.jpg" alt=""> 
+                <p class="b-tip__description">Штаб-квартира компася в городе Лене, что в 80 километрании находитх западнее города Ганновер</p>
+              </div>
+            </div>
+            <div class="b-tip__text-wrap">
+              <p class="b-tip__text">Главный управляющий компании Ханс Хельман Хагельманн  и Манфред Виллерман имеют основание пребывать в хорошем настроении: Nolte является вторым по величине производителем кухонной мебели в Германии и увеличивает свою долю на рынке. Город  Лене (Loehne), согласно указателю, расположенному на въезде в населенный пункт, является международным центром кухонной индустрии. «И это не преувеличение», - говорит водитель такси, проезжая вдоль золотисто-желтых пшеничных полей и домов в стиле  фахверк (Fachwerkhaus). – Почти у каждого в нашем городе есть знакомые, которые работают в кухонной отрасли».</p>
+              <p class="b-tip__text">Более 25 производителей расположились в радиусе 30 км.  Здесь, одним из крупнейших, по праву  является Nolte Kuechen. Ведущий маркетолог фабрики Мартин Лихьте (Martin Lichte) знает причину этой индустриальной монокультуры: «В 30-ых годах здесь находилось много фабрик по производству сигар. Позднее, когда сигареты завоевали табачный рынок, производители ящиков для сигар перешли на изготовление корпусной мебели».  Один из подобных случаев необычного изменения структуры производства, действительно, был документально зафиксирован. Однако, согласитесь, что это все же больше напоминает легенду. Возможно, все произошло благодаря трудолюбию людей в северной Вестфалии, которое привлекло такое большое количество производителей кухонной мебели.</p>
+            </div>     
+            <p class="b-tip__subtitle">Все автоматизировано</p>
+            <img src="/f/i/tips/image1.jpg" alt="" class="b-tip__img">
+            <p class="b-tip__description">Штаб-квартира компании находится в городе Лене, что в 80 километрах западнее города Ганновер</p>
+             <p class="b-tip__text">Кто не имеет представления о процессе производства кухонь, наверняка, удивится, не увидев при посещении фабрики Nolte Kuechen столяра с его инструментами. На производстве встречаются в основном специалисты по деревообработке со знанием компьютерных программ, которые дистанционно управляют огромным количеством техники. Транспортировочные ленты пролегают по всей площади производства и соединяют один участок с другим. Фрезерные и деревообрабатывающие /лесопильные машины выполняют свою работу с точностью до сотой миллиметра. Подача отдельных элементов, например, выдвижных ящиков, происходит также автоматически при помощи манипулятора, оснащенного вакуумными присосками.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="b-footer">
+      <a class="b-made-by" href="http://inteo-s.ru" rel="external">
+        Создание сайта -
+        <span class="b-made-by__logo"></span>
+      </a>
+      <input type="text" class="b-footer__search input-search input" placeholder="Поиск">
+      <ul class="b-footer__menu">
+        <li><a href="#">О компании</a></li>
+        <li><a href="#">Бренды</a></li>
+        <li><a href="#">Наши проекты</a></li>
+        <li><a href="#">Советы специалистов</a></li>
+        <li><span class="icon-action"></span><a href="#">Акции</a></li>
+        <li><span class="icon-templates"></span><a href="#">Продажа образцов</a></li>
+        <li><a href="#">Новости</a></li>
+      </ul>
+    </footer>
+  </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
