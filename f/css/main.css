@@ -2146,7 +2146,7 @@ a:hover {
     width: 25%;
   }
 }
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .b-catalog__item {
     width: 33.333333%;
   }
@@ -2979,16 +2979,16 @@ a:hover {
 .b-projects .fotorama__stage, .b-projects .fotorama__pointer {
   height: 270px !important;
 }
-.b-catalog__item {
+.b-projects .b-catalog__item {
   width: 25%;
 } 
 @media (max-width: 1680px) {
-  .b-catalog__item {
+  .b-projects .b-catalog__item {
     width: 33.333333%;
   }
 }
 @media (max-width: 1279px) {
-  .b-catalog__item {
+  .b-projects .b-catalog__item {
     width: 50%;
   }
 }
@@ -4179,4 +4179,80 @@ a:hover {
 .b-tip__img {
   width: 100%;
   margin-bottom: 15px;
+}
+.b-promo .b-catalog__title {
+  text-transform: none;
+  line-height: 25px;
+}
+.b-promo .b-catalog__text {
+  font: 14px/30px 'ProximaNova', sans-serif;
+}
+.b-catalog__item_promo .b-catalog__img {
+  position: relative;
+}
+.b-catalog__item_promo i {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 0;
+  left: 0;
+  background: #f7df08;
+}
+.b-catalog__item_promo i:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 27px;
+  height: 25px;
+  background: url(/f/i/icons.png);
+  background-position: -454px 0;
+}
+.b-catalog__item_promo_gift i:before {
+  width: 30px;
+  height: 28px;
+  background-position: -424px 0;
+}
+.b-promo-item {
+  padding-top: 25px;
+  margin-bottom: 30px;
+}
+.b-promo-item__title {
+  font: bold 60px/70px 'ProximaNova', sans-serif;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding-right: 380px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 10;
+} 
+.b-promo-item__slider {
+  margin-top: 110px;
+  margin-bottom: 70px;
+}
+.b-promo-item .b-where {
+  padding: 0;
+}
+.b-promo-item__where-img {
+  margin-top: -40px;
+  margin-bottom: 30px;
+}
+.b-promo-item .black-btn {
+  padding: 0 60px;
+}
+.b-promo-item__detail {
+  overflow: hidden;
+}
+.b-promo-item__detail-text {
+  line-height: 35px;
+  margin-bottom: 35px;
+}
+@media (max-width: 1279px) {
+  .b-promo-item .b-about-brand {
+    display: block;
+  }
 }
