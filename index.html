@@ -8,6 +8,7 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
   <link rel="stylesheet" href="/f/css/onepage-scroll.css">
+  <link rel="stylesheet" href="/f/css/fotorama.css">
   <link rel="stylesheet" href="/f/css/main.css">
   <!--[if lte IE 9]><link rel="stylesheet" href="f/css/ie.css"><![endif]-->
   <link rel="stylesheet" href="/f/fancybox/jquery.fancybox.css?v=2.1.5" media="screen">
@@ -15,19 +16,46 @@
   <script src="/f/js/jquery-1.11.1.min.js"></script>
   <script src="/f/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
   <script src="/f/js/jquery.onepage-scroll.min.js"></script>
+  <script src="/f/js/fotorama.js"></script>
   <script src="/f/js/common.js"></script>
   <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
   <style>
     svg {
       width: 458px; height: 80px;
-      font: bold 80px/80px 'ProximaNova', sans-serif;
+      font: 80px/80px 'proxima_nova_thextrabold', sans-serif;
     }
     text { fill: url(#germany); }
   </style>
   <script>
-     $(document).ready(function(){
+    $(document).ready(function(){
       $('.b-scroll').onepage_scroll();
+      $(".b-scroll").moveTo(2);
+      resize_slider();
+    });
+    $(window).resize(function(){
+      resize_slider();
+    });
+    $(function(){
+      $(".b-advant__slider").on('fotorama:showend', function (e, fotorama) {
+        resize_slider();
+      });
+      $(".b-text-block__hover, .b-text-block__btn").mouseover(function(){
+        $(this).parent().find(".b-text-block__description").css("opacity", 0);
+        $(this).parent().find(".b-text-block__btn").css("opacity", 1);
+        $(this).parent().find(".b-text-block__back").addClass("b-text-block__back_rotated");
+      }).mouseout(function(){
+        $(this).parent().find(".b-text-block__description").css("opacity", 1);
+        $(this).parent().find(".b-text-block__btn").css("opacity", 0);
+        $(this).parent().find(".b-text-block__back").removeClass("b-text-block__back_rotated");
+      })
      })
+    function resize_slider() {
+      var $fotoramaDiv = $('.b-advant__slider').fotorama();
+      var fotorama = $fotoramaDiv.data('fotorama');
+      fotorama.resize({
+        height: $(".b-advant__item").height()
+      });
+    }
   </script>
 </head>
 <body>
@@ -87,7 +115,10 @@
               </div>
               <h2 class="b-text-block__title">кухни</h2>
               <p class="b-text-block__description">Сдержанно-элегантный дизайн в комбинации с поверхностями, которые сразу привлекут Ваше внимание: гладкие фасады, выполненные из современных материалов, открывают неограниченные возможности для создания индивидуального стиля.</p>
-              <a href="#" class="black-btn b-text-block__btn">Посмотреть коллекции</a>
+              <div class="b-text-block__hover"></div>
+              <div class="b-text-block__btn">
+                <a href="#" class="black-btn">Посмотреть коллекции</a>
+              </div>
             </div>
             <img src="/f/i/kitchen.png" alt="" class="b-screen__ico b-screen__elem">
             <div class="b-screen__main-img-wrap  b-screen__elem">
@@ -107,7 +138,10 @@
               </div>
               <h2 class="b-text-block__title">мебель</h2>
               <p class="b-text-block__description">Ego-это беспрецедентная индивидуальность. Концепция от известного дизайнера Edgara Reutera отличается изобилием возможностей. Это и современный минимализм и не выходящая из моды классика в одном лице.</p>
-              <a href="#" class="black-btn b-text-block__btn">Посмотреть коллекции</a>
+              <div class="b-text-block__hover"></div>
+              <div class="b-text-block__btn">
+                <a href="#" class="black-btn">Посмотреть коллекции</a>
+              </div>
             </div>
             <img src="/f/i/furnit-ico.png" alt="" class="b-screen__ico b-screen__elem">
             <div class="b-screen__main-img-wrap  b-screen__elem">
@@ -127,6 +161,7 @@
               </div>
               <h2 class="b-text-block__title">техника</h2>
               <p class="b-text-block__description">Мы предоставляем большой выбор кухонный техники среди лидеров европейских производителей, таких как Bosch, Siemens, Miele, Liebherr и многих других.</p>
+              <div class="b-text-block__hover"></div>
               <a href="#" class="black-btn b-text-block__btn">Посмотреть коллекции</a>
             </div>
             <img src="/f/i/tech-ico.png" alt="" class="b-screen__ico b-screen__elem">
@@ -147,6 +182,7 @@
               </div>
               <h2 class="b-text-block__title">Текстиль</h2>
               <p class="b-text-block__description">Ego-это беспрецедентная индивидуальность. Концепция от известного дизайнера Edgara Reutera отличается изобилием возможностей. Это и современный минимализм и не выходящая из моды классика в одном лице.</p>
+              <div class="b-text-block__hover"></div>
               <a href="#" class="black-btn b-text-block__btn">Посмотреть коллекции</a>
             </div>
             <img src="/f/i/textile-ico.png" alt="" class="b-screen__ico b-screen__elem">
@@ -155,6 +191,38 @@
               <img src="/f/i/textile-logo.png" alt="" class="b-screen__logo-img">
             </div>
             <img src="/f/i/textile-add.jpg" class="b-screen__add-img b-screen__elem" alt="">
+          </section>
+          <section class="b-advant" data-section-name="Преимущества">
+            <div class="b-advant__slider fotorama" data-width="950" data-nav="false">
+              <div class="b-advant__item">
+                <div class="b-advant__img">
+                  <img src="/f/i/advant/1.png" alt="">
+                </div>
+                <p class="b-advant_title">Гарантия 5 лет</p>
+                <p class="b-advant__text">Вся мебель поставляется в Россию под контролем представительства Nolte-Kuechen в России собственным фирменным транспортом, который гарантирует определенный срок поставки.</p>
+              </div>
+              <div class="b-advant__item">
+                <div class="b-advant__img">
+                  <img src="/f/i/advant/2.png" alt="">
+                </div>
+                <p class="b-advant_title">оперативность</p>
+                <p class="b-advant__text">Вся мебель поставляется в Россию под контролем представительства Nolte-Kuechen в России собственным фирменным транспортом, который гарантирует определенный срок поставки.</p>
+              </div>
+              <div class="b-advant__item">  
+                <div class="b-advant__img">
+                  <img src="/f/i/advant/3.png" alt="">
+                </div>
+                <p class="b-advant_title">Профессионализм</p>
+                <p class="b-advant__text">Специалисты нашей компании прошли специальное обучение на фабриках , чтобы предложить Вам квалифицированный сервис в разработке индивидуального дизайна вашей квартиры или дома.</p>
+              </div>
+              <div class="b-advant__item">
+                <div class="b-advant__img">
+                  <img src="/f/i/advant/4.png" alt="">
+                </div>
+                <p class="b-advant_title">Надежность</p>
+                <p class="b-advant__text">Высокий уровень качества для всех кухонь подтверждается знаком GS, а также заключением института по тестированию товара.</p>
+              </div>
+            </div>
           </section>
         </div>
       </div>

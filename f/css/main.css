@@ -1261,17 +1261,39 @@ input[type='submit'].btn-block, input[type='reset'].btn-block, input[type='butto
 }
 /*---------------MAIN-------------------------
 ----------------------------------------------*/
-@font-face {
+/* @font-face {
   font-family: 'ProximaNova';
   src: url('/f/fonts/ProximaNova-Reg.otf') format('opentype');
   font-weight: normal;
 }
 @font-face {
   font-family: 'ProximaNova';
-  src: url('/f/fonts/ProximaNova.otf') format('opentype');
+  src: url('/f/fonts/ProximaNova-Xbold.otf') format('opentype');
   font-weight: bold;
-}
+} */
+@font-face {
+    font-family: 'proxima_nova_thextrabold';
+    src: url('/f/fonts/proximanova-xbold.eot');
+    src: url('/f/fonts/proximanova-xbold.eot?#iefix') format('embedded-opentype'),
+         url('/f/fonts/proximanova-xbold.woff2') format('woff2'),
+         url('/f/fonts/proximanova-xbold.woff') format('woff'),
+         url('/f/fonts/proximanova-xbold.ttf') format('truetype'),
+         url('/f/fonts/proximanova-xbold.svg#proxima_nova_thextrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
+@font-face {
+    font-family: 'proxima_nova_rgregular';
+    src: url('/f/fonts/proximanova-reg.eot');
+    src: url('/f/fonts/proximanova-reg.eot?#iefix') format('embedded-opentype'),
+         url('/f/fonts/proximanova-reg.woff2') format('woff2'),
+         url('/f/fonts/proximanova-reg.woff') format('woff'),
+         url('/f/fonts/proximanova-reg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
 html, body{
   padding:0;
   margin:0;
@@ -1410,7 +1432,6 @@ html, body{
   color: #f7df08;
 }
 a {
-  font-size: 14px;
   border-bottom: 1px solid;
   text-decoration: none;
   color: #000;
@@ -1463,7 +1484,7 @@ a:hover {
   border-bottom-color: #f7df07;
 }
 .b-main-menu__item a {
-  font: 16px 'ProximaNova', sans-serif;
+  font: 16px 'proxima_nova_rgregular', sans-serif;
   text-transform: uppercase;
   color: #000;
   border-bottom: none;
@@ -1478,7 +1499,7 @@ a:hover {
   letter-spacing: .05em;
 }
 .b-contacts__link {
-  font: 16px 'ProximaNova', sans-serif;
+  font: 16px 'proxima_nova_rgregular', sans-serif;
   text-transform: uppercase;
   color: #000;
   border-bottom: 3px solid #000; 
@@ -1515,6 +1536,9 @@ a:hover {
   vertical-align: top;
   margin-bottom: 10px;
   margin-right: 3%;
+}
+.b-footer__menu li a {
+  font-size: 14px;
 }
 .b-container {
   min-height:100%;
@@ -1600,7 +1624,7 @@ a:hover {
   margin-bottom: 40px;
 }
 .b-main__title {
-  font: bold 80px/80px 'ProximaNova', sans-serif;
+  font: 80px/80px 'proxima_nova_thextrabold', sans-serif;
   text-transform: uppercase;
   margin-top: -250px;
   -webkit-transition: all .8s;
@@ -1831,27 +1855,108 @@ a:hover {
 .up .b-text-block {
   margin-top: -200px;
 }
+@keyframes spinner { 
+  from { 
+    -moz-transform: rotateY(0deg) skewY(15deg); 
+    -ms-transform: rotateY(0deg) skewY(15deg); 
+    transform: rotateY(0deg) skewY(15deg); 
+  }
+  to { 
+    -moz-transform: rotateY(-180deg) skewY(15deg); 
+    -ms-transform: rotateY(-180deg) skewY(15deg); 
+    transform: rotateY(-180deg) skewY(15deg); 
+  }
+}
+@keyframes spinner2 { 
+  from { 
+    -moz-transform: rotateY(-180deg) skewY(15deg); 
+    -ms-transform: rotateY(-180deg) skewY(15deg); 
+    transform: rotateY(-180deg) skewY(15deg); 
+  }
+  to { 
+    -moz-transform: rotateY(0deg) skewY(15deg); 
+    -ms-transform: rotateY(0deg) skewY(15deg); 
+    transform: rotateY(0deg) skewY(15deg); 
+  }
+}
+@keyframes spinner3 { 
+  from { 
+    -moz-transform: rotateY(0deg) skewY(-15deg); 
+    -ms-transform: rotateY(0deg) skewY(-15deg); 
+    transform: rotateY(0deg) skewY(-15deg); 
+  }
+  to { 
+    -moz-transform: rotateY(-180deg) skewY(-15deg); 
+    -ms-transform: rotateY(-180deg) skewY(-15deg); 
+    transform: rotateY(-180deg) skewY(-15deg); 
+  }
+}
+@keyframes spinner4 { 
+  from { 
+    -moz-transform: rotateY(-180deg) skewY(-15deg); 
+    -ms-transform: rotateY(-180deg) skewY(-15deg); 
+    transform: rotateY(-180deg) skewY(-15deg); 
+  }
+  to { 
+    -moz-transform: rotateY(0deg) skewY(-15deg); 
+    -ms-transform: rotateY(0deg) skewY(-15deg); 
+    transform: rotateY(0deg) skewY(-15deg); 
+  }
+}
 .b-text-block__back {
-  background: #f7df08;
+  position: absolute;
   width: 280px;
   height: 270px;
-  -moz-transform: skewY(15deg);
-  -ms-transform: skewY(15deg); 
-  -webkit-transform: skewY(15deg); 
-  -o-transform: skewY(15deg); 
-  transform: skewY(15deg);
-  position: absolute;
   top: 0;
   left: 0;
-  cursor: pointer;
   z-index: -1;
+  background: #f7df08;
+  -webkit-animation-name: spinner2; 
+  -webkit-animation-timing-function: linear; 
+  -webkit-animation-iteration-count: 1; 
+  -webkit-animation-duration: .4s; 
+  animation-name: spinner2; 
+  animation-timing-function: linear; 
+  animation-iteration-count: 1; 
+  animation-duration: .4s; 
+  -webkit-transform-style: preserve-3d; 
+  -moz-transform-style: preserve-3d; 
+  -ms-transform-style: preserve-3d; 
+  transform-style: preserve-3d;
+  -moz-transform: rotateY(0deg) skewY(15deg); 
+  -ms-transform: rotateY(0deg) skewY(15deg); 
+  transform: rotateY(0deg) skewY(15deg); 
+}
+.b-text-block__back_rotated {
+  -webkit-animation-name: spinner; 
+  -webkit-animation-timing-function: linear; 
+  -webkit-animation-iteration-count: 1; 
+  -webkit-animation-duration: .4s; 
+  animation-name: spinner; 
+  animation-timing-function: linear; 
+  animation-iteration-count: 1; 
+  animation-duration: .4s; 
+  -webkit-transform-style: preserve-3d; 
+  -moz-transform-style: preserve-3d; 
+  -ms-transform-style: preserve-3d; 
+  transform-style: preserve-3d;
+  -moz-transform: rotateY(-180deg) skewY(15deg); 
+  -ms-transform: rotateY(-180deg) skewY(15deg); 
+  transform: rotateY(-180deg) skewY(15deg);  
 }
 .b-screen_right .b-text-block__back{
-  -moz-transform: skewY(-15deg);
-  -ms-transform: skewY(-15deg); 
-  -webkit-transform: skewY(-15deg); 
-  -o-transform: skewY(-15deg); 
-  transform: skewY(-15deg);
+  -webkit-animation-name: spinner4; 
+  animation-name: spinner4; 
+  -moz-transform: rotateY(0deg) skewY(-15deg); 
+  -ms-transform: rotateY(0deg) skewY(-15deg); 
+  transform: rotateY(0deg) skewY(-15deg); 
+}
+.b-screen_right .b-text-block__back_rotated {
+  -webkit-animation-name: spinner3; 
+  animation-name: spinner3;
+  -moz-transform: rotateY(-180deg) skewY(-15deg); 
+  -ms-transform: rotateY(-180deg) skewY(-15deg); 
+  transform: rotateY(-180deg) skewY(-15deg); 
 }
 .b-text-block__flag-color {
   background: #000;
@@ -1874,10 +1979,15 @@ a:hover {
   top: 78px;
 }
 .b-text-block__btn {
-  
-}
-.b-text-block:hover .b-text-block__btn {
-  display: inline-block;
+  opacity: 0;
+  -webkit-transition: opacity .4s ease-out;
+  -moz-transition: opacity .4s ease-out;
+  -o-transition: opacity .4s ease-out;
+  -ms-transition: opacity .4s ease-out;
+  transition: opacity .4s ease-out;
+  position: absolute;
+  top: 170px;
+  left: 30px;
 }
 .b-screen__elem {
   -webkit-transition: all .9s ease-in-out;
@@ -1887,7 +1997,7 @@ a:hover {
   transition: all .9s ease-in-out;
 }
 .b-text-block__title {
-  font: bold 60px/70px 'ProximaNova', sans-serif;
+  font: 60px/70px 'proxima_nova_thextrabold', sans-serif;
   letter-spacing: .05em;
   text-transform: uppercase;
   border-bottom: 10px solid;
@@ -1899,10 +2009,20 @@ a:hover {
   font-size: 16px;
   line-height: 35px;
   position: relative;
-  display: none;
+  opacity: 1;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
-.b-text-block:hover .b-text-block__description {
-  display: none;
+.b-text-block__hover {
+  position: absolute;
+  left: 0;
+  top: -40px;
+  width: 280px;
+  height: 350px;
+  cursor: pointer;
 }
 .b-screen__ico {
   position: absolute;
@@ -2076,7 +2196,7 @@ a:hover {
 }
 .b-title__text h1,
 .b-title__text h2 {
-  font: bold 60px/70px 'ProximaNova', sans-serif;
+  font: 60px/70px 'proxima_nova_thextrabold', sans-serif;
   letter-spacing: .05em;
   text-transform: uppercase;
   margin: 0;
@@ -2206,7 +2326,7 @@ a:hover {
   opacity: 1;
 }
 .b-catalog__title {
-  font: bold 16px/20px 'ProximaNova', sans-serif;
+  font: 16px/20px 'proxima_nova_thextrabold', sans-serif;
   text-transform: uppercase;
 }
 .b-catalog__text {
@@ -2215,7 +2335,7 @@ a:hover {
   letter-spacing: .05em;
 }
 .b-catalog__price {
-  font: bold 20px/35px 'ProximaNova', sans-serif;
+  font: 20px/35px 'proxima_nova_thextrabold', sans-serif;
   letter-spacing: .05em;
 }
 .b-catalog__price span {
@@ -2249,7 +2369,7 @@ a:hover {
   padding-top: 30px;
 }
 .b-goods__title {
-  font: bold 60px/60px 'ProximaNova', sans-serif;
+  font: 60px/60px 'proxima_nova_thextrabold', sans-serif;
   letter-spacing: .05em;
   margin: 0;
   text-transform: uppercase;
@@ -2470,7 +2590,7 @@ a:hover {
 }
 .b-goods__add span {
   text-transform: uppercase;
-  font: bold 16px/90px 'ProximaNova', sans-serif;
+  font: 16px/90px 'proxima_nova_thextrabold', sans-serif;
 }
 .b-about-brand {
   width: 230px;
@@ -2582,7 +2702,7 @@ a:hover {
 .b-advantages__title {
   max-width: 700px;
   text-transform: uppercase;
-  font: bold 40px/50px 'ProximaNova', sans-serif;
+  font: 40px/50px 'proxima_nova_thextrabold', sans-serif;
   letter-spacing: .05em;
   margin-bottom: 40px;
 }
@@ -2595,7 +2715,7 @@ a:hover {
   padding: 45px 35px 20px;
 }
 .b-popup__title {
-  font: bold 40px/40px 'ProximaNova', sans-serif;
+  font: 40px/40px 'proxima_nova_thextrabold', sans-serif;
   letter-spacing: .05em;
   text-align: center;
   text-transform: uppercase;
@@ -2793,7 +2913,7 @@ a:hover {
   }
 } */
 .b-section__title {
-  font: bold 30px/50px 'ProximaNova', sans-serif;
+  font: 30px/50px 'proxima_nova_thextrabold', sans-serif;
   letter-spacing: .05em;
   text-transform: uppercase;
   border-bottom: 5px solid;
@@ -2832,7 +2952,7 @@ a:hover {
   vertical-align: top;
 }
 .b-subsection-filter__item {
-  font: bold 16px/35px 'ProximaNova', sans-serif;
+  font: 16px/35px 'proxima_nova_thextrabold', sans-serif;
   letter-spacing: .05em;
   margin-right: 20px;
   border: none;
@@ -2895,7 +3015,7 @@ a:hover {
   z-index: -1;
 }
 .b-where__price {
-  font: bold 40px/70px 'ProximaNova', sans-serif;
+  font: 40px/70px 'proxima_nova_thextrabold', sans-serif;
   letter-spacing: .05em;
 }
 .b-where__price span {
@@ -2966,7 +3086,7 @@ a:hover {
   z-index: -1;
 }
 .b-catalog-slider__title {
-  font: bold 30px/60px 'ProximaNova', sans-serif;
+  font: 30px/60px 'proxima_nova_thextrabold', sans-serif;
   letter-spacing: .05em;
   text-align: center;
   text-transform: uppercase;
@@ -3079,7 +3199,7 @@ a:hover {
   vertical-align: top;
 }
 .b-brands__category span {
-  font: bold 30px/30px 'ProximaNova', sans-serif;
+  font: 30px/30px 'proxima_nova_thextrabold', sans-serif;
   letter-spacing: .05em;
   text-transform: uppercase;
   border-bottom: 5px solid;
@@ -3174,7 +3294,7 @@ a:hover {
   padding-top: 25px; 
 }
 .b-brand__title {
-  font: bold 60px/60px 'ProximaNova', sans-serif;
+  font: 60px/60px 'proxima_nova_thextrabold', sans-serif;
   letter-spacing: .05em;
   margin: 0;
   text-transform: uppercase;
@@ -3295,7 +3415,7 @@ a:hover {
   height: 45% !important;
 }
 .b-about__subtitle {
-  font: bold 20px/35px 'ProximaNova', sans-serif;
+  font: 20px/35px 'proxima_nova_thextrabold', sans-serif;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -3691,7 +3811,7 @@ a:hover {
   }
 }
 .b-service__title {
-  font: bold 20px/35px 'ProximaNova', sans-serif;
+  font: 20px/35px 'proxima_nova_thextrabold', sans-serif;
   text-transform: uppercase;
   position: relative;
   margin-bottom: 10px;
@@ -3969,7 +4089,7 @@ a:hover {
   vertical-align: top;
 }
 .b-contact-page__num {
-  font: bold 14px/20px 'ProximaNova', sans-serif;
+  font: 14px/20px 'proxima_nova_thextrabold', sans-serif;
   background: #f7df07;
   border-radius: 50%;
   padding: 0 7px;
@@ -4024,7 +4144,7 @@ a:hover {
 .map-marker-label{
   position: absolute;
   color: #000;
-  font: bold 14px/20px 'ProximaNova', sans-serif;
+  font: 14px/20px 'proxima_nova_thextrabold', sans-serif;
   background: #f7df0a;
   padding: 0 7px;
   height: 20px;
@@ -4143,7 +4263,7 @@ a:hover {
   padding-top: 30px;
 }
 .b-tip__title {
-  font: bold 60px/60px 'ProximaNova', sans-serif;
+  font: 60px/60px 'proxima_nova_thextrabold', sans-serif;
   letter-spacing: .05em;
   margin: 0;
   text-transform: uppercase;
@@ -4173,7 +4293,7 @@ a:hover {
   margin-bottom: 45px;
 }
 .b-tip__subtitle {
-  font: bold 40px/70px 'ProximaNova', sans-serif;
+  font: 40px/70px 'proxima_nova_thextrabold', sans-serif;
   letter-spacing: .05em;
   text-transform: uppercase;
   margin-bottom: 35px;
@@ -4187,7 +4307,7 @@ a:hover {
   line-height: 25px;
 }
 .b-promo .b-catalog__text {
-  font: 14px/30px 'ProximaNova', sans-serif;
+  font: 14px/30px 'proxima_nova_rgregular', sans-serif;
 }
 .b-catalog__item_promo i {
   position: absolute;
@@ -4220,7 +4340,7 @@ a:hover {
   margin-bottom: 30px;
 }
 .b-promo-item__title {
-  font: bold 60px/70px 'ProximaNova', sans-serif;
+  font: 60px/70px 'proxima_nova_thextrabold', sans-serif;
   letter-spacing: .05em;
   text-transform: uppercase;
   padding-right: 380px;
@@ -4259,7 +4379,7 @@ a:hover {
   margin-bottom: 70px;
 }
 .b-catalog__old-price {
-  font: normal 20px/35px 'ProximaNova', sans-serif !important;
+  font: 20px/35px 'proxima_nova_rgregular', sans-serif !important;
   letter-spacing: .05em;
   text-transform: uppercase;
   position: relative;
@@ -4275,4 +4395,50 @@ a:hover {
   top: 0;
   bottom: 0;
   margin: auto 0;
+}
+.b-advant {
+  padding-top: 90px;
+}
+.b-advant__slider {
+  max-width: 950px;
+  margin: 0 auto;
+  text-align: center;
+}
+.b-advant_title {
+  font: 60px/90px 'proxima_nova_thextrabold', sans-serif;
+  text-transform: uppercase;
+  position: relative;
+}
+.b-advant_title:before {
+  background: #f7df08;
+  width: 280px;
+  height: 262px;
+  -moz-transform: skewY(-15deg);
+  -ms-transform: skewY(-15deg); 
+  -webkit-transform: skewY(-15deg); 
+  -o-transform: skewY(-15deg); 
+  transform: skewY(-15deg);
+  position: absolute;
+  top: -160px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  content: '';
+  z-index: -1;
+}
+.b-advant__text {
+  line-height: 35px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.b-advant__img {
+  height: 227px;
+  position: relative;
+}
+.b-advant__img img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
 }
