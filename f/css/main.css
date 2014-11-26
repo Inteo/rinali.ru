@@ -1989,6 +1989,9 @@ a:hover {
   top: 170px;
   left: 30px;
 }
+.b-text-block__btn .black-btn {
+  padding: 0 15px;
+}
 .b-screen__elem {
   -webkit-transition: all .9s ease-in-out;
   -moz-transition: all .9s ease-in-out;
